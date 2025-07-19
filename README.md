@@ -2,7 +2,7 @@
 
 > A brutalist React component library that embraces bold, unapologetic design.
 
-[![npm version](https://badge.fury.io/js/chaos%2Fui.svg)](https://badge.fury.io/js/chaos%2Fui)
+[![npm version](https://badge.fury.io/js/@glitchlabs%2Fchaosui.svg)](https://badge.fury.io/js/@glitchlabs%2Fchaosui)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
