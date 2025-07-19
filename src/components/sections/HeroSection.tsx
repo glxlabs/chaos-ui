@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
   const { copied, copy } = useCopyToClipboard();
 
   const handleInstallCopy = async () => {
-    await copy("npm install chaos/ui");
+    await copy("npm install @chaos/ui");
   };
 
   useEffect(() => {
@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
               className="px-8 py-4 text-lg"
             >
               <Copy className="w-5 h-5 mr-2" />
-              {copied ? "Copied!" : "npm install chaos/ui"}
+              {copied ? "Copied!" : "npm install @chaos/ui"}
             </Button>
 
             <Button
@@ -151,7 +151,7 @@ const HeroSection: React.FC = () => {
                       <Copy className="w-4 h-4" />
                     </Button>
                   </div>
-                  <code className="text-sm text-cyber-white font-mono">npm install chaos/ui</code>
+                  <code className="text-sm text-cyber-white font-mono">npm install @chaos/ui</code>
                 </div>
 
                 <div className="text-left">
@@ -160,13 +160,13 @@ const HeroSection: React.FC = () => {
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={() => copy(`import { Button } from "chaos/ui";`)}
+                      onClick={() => copy(`import { Button } from "@chaos/ui";`)}
                     >
                       <Copy className="w-4 h-4" />
                     </Button>
                   </div>
                   <code className="text-sm text-cyber-white font-mono">
-                    {`import { Button } from "chaos/ui";`}
+                    {`import { Button } from "@chaos/ui";`}
                   </code>
                 </div>
 

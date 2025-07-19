@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleSidebar, sidebarOpen }) => {
   const { copied, copy } = useCopyToClipboard();
 
   const handleInstallCopy = async () => {
-    await copy("npm install chaos/ui");
+    await copy("npm install @chaos/ui");
   };
 
   return (
@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleSidebar, sidebarOpen }) => {
               className="hidden md:inline-flex"
             >
               <Copy className="w-4 h-4 mr-2" />
-              {copied ? "Copied!" : "npm install chaos/ui"}
+              {copied ? "Copied!" : "npm install @chaos/ui"}
             </Button>
           </div>
         </div>

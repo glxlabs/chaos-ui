@@ -21,7 +21,7 @@ ChaoS/UI is a brutalist React component library that rejects subtle design trend
 ### Installation
 
 ```bash
-npm install chaos/ui
+npm install @chaos/ui
 ```
 
 ### Setup
@@ -37,7 +37,7 @@ npm install react react-dom lucide-react
 ```js
 // tailwind.config.js
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}", "./node_modules/chaos/ui/dist/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}", "./node_modules/@chaos/ui/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -81,7 +81,7 @@ module.exports = {
 
 ```tsx
 // Import this ONCE in your main entry file (src/main.tsx or src/index.tsx)
-import "chaos/ui/styles";
+import "@chaos/ui/styles";
 ```
 
 > ⚠️ **Important**: The styles import is REQUIRED for proper brutalist styling. Without it, components will use default browser styling and look plain.
@@ -89,8 +89,8 @@ import "chaos/ui/styles";
 ### Basic Usage
 
 ```tsx
-import { Button, Card, Input, Label } from "chaos/ui";
-import "chaos/ui/styles"; // Required for brutal styling
+import { Button, Card, Input, Label } from "@chaos/ui";
+import "@chaos/ui/styles"; // Required for brutal styling
 
 function App() {
   return (
@@ -210,7 +210,7 @@ const CustomButton = ({ children, ...props }) => (
 ChaoS/UI is built with TypeScript and provides full type definitions:
 
 ```tsx
-import { ButtonProps, CardProps } from "chaos/ui";
+import { ButtonProps, CardProps } from "@chaos/ui";
 
 interface MyComponentProps extends ButtonProps {
   customProp: string;
@@ -227,11 +227,11 @@ interface MyComponentProps extends ButtonProps {
 
 ```tsx
 // ✅ Correct - Import styles in your main file
-import "chaos/ui/styles";
+import "@chaos/ui/styles";
 import "./your-app.css"; // Your styles should come after
 
 // ❌ Wrong - Missing styles import
-import { Button } from "chaos/ui"; // Will look plain
+import { Button } from "@chaos/ui"; // Will look plain
 ```
 
 ### Tailwind Classes Not Working
@@ -245,7 +245,7 @@ import { Button } from "chaos/ui"; // Will look plain
 module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/chaos/ui/dist/**/*.{js,ts,jsx,tsx}", // Add this line
+    "./node_modules/@chaos/ui/dist/**/*.{js,ts,jsx,tsx}", // Add this line
   ],
   // ... rest of config
 };
@@ -258,7 +258,7 @@ module.exports = {
 **Solution**: ChaoS/UI supports React 18 and 19. Install with:
 
 ```bash
-npm install chaos/ui --legacy-peer-deps
+npm install @chaos/ui --legacy-peer-deps
 ```
 
 ## Documentation
