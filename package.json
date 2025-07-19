@@ -1,5 +1,5 @@
 {
-  "name": "chaos-ui",
+  "name": "chaos/ui",
   "version": "1.0.0",
   "description": "A brutalist React component library with TypeScript support and aggressive design aesthetics",
   "type": "module",

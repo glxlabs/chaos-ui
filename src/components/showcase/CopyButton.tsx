@@ -94,7 +94,7 @@ export const InstallCopyButton: React.FC<{
   command?: string;
   variant?: "default" | "compact" | "ghost";
   className?: string;
-}> = ({ packageName = "chaos-ui", command, variant = "default", className = "" }) => {
+}> = ({ packageName = "chaos/ui", command, variant = "default", className = "" }) => {
   const installCommand = command || `npm install ${packageName}`;
 
   return (
@@ -112,7 +112,7 @@ export const ImportCopyButton: React.FC<{
   packageName?: string;
   variant?: "default" | "compact" | "ghost";
   className?: string;
-}> = ({ componentName, packageName = "chaos-ui", variant = "compact", className = "" }) => {
+}> = ({ componentName, packageName = "chaos/ui", variant = "compact", className = "" }) => {
   const importStatement = `import { ${componentName} } from "${packageName}";`;
 
   return (

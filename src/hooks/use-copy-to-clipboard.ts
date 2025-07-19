@@ -9,7 +9,7 @@ export interface UseCopyToClipboardReturn {
 
 export const useCopyToClipboard = (resetDelay: number = 2000): UseCopyToClipboardReturn => {
   const [copied, setCopied] = useState<boolean>(false);
-  const [timeoutId, setTimeoutId] = useState<number | null>(null);
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   const copy = useCallback(
     async (text: string): Promise<void> => {
