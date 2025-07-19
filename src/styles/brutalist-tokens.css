@@ -1,0 +1,148 @@
+/* Brutalist Design System CSS Variables */
+:root {
+  /* Colors */
+  --cyber-black: #000000;
+  --cyber-dark: #0a0a0a;
+  --cyber-green: #00ff41;
+  --cyber-green-bright: #39ff14;
+  --cyber-magenta: #ff006e;
+  --cyber-magenta-bright: #ff0080;
+  --cyber-white: #ffffff;
+  --cyber-gray: #f0f0f0;
+  --cyber-gray-dark: #1a1a1a;
+
+  /* Brutalist Extended Colors */
+  --brutal-yellow: #ffff00;
+  --brutal-orange: #ff8c00;
+  --brutal-red: #ff0000;
+  --brutal-blue: #0080ff;
+  --brutal-purple: #8000ff;
+
+  /* Spacing */
+  --brutal-xs: 4px;
+  --brutal-sm: 8px;
+  --brutal-md: 12px;
+  --brutal-lg: 16px;
+  --brutal-xl: 24px;
+  --brutal-2xl: 32px;
+  --brutal-3xl: 48px;
+  --brutal-4xl: 64px;
+
+  /* Borders */
+  --brutal-border: 3px;
+  --brutal-border-thick: 4px;
+  --brutal-border-extra: 6px;
+
+  /* Shadows */
+  --brutal-shadow: 4px 4px 0px var(--cyber-green);
+  --brutal-shadow-magenta: 4px 4px 0px var(--cyber-magenta);
+  --brutal-shadow-white: 4px 4px 0px var(--cyber-white);
+  --brutal-shadow-black: 4px 4px 0px var(--cyber-black);
+  --brutal-shadow-lg: 6px 6px 0px var(--cyber-green);
+  --brutal-shadow-xl: 8px 8px 0px var(--cyber-green);
+  --brutal-shadow-hover: 2px 2px 0px var(--cyber-green);
+  --brutal-shadow-inset: inset 2px 2px 0px var(--cyber-green);
+
+  /* Typography */
+  --font-brutalist: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Border Radius (Brutalist = 0) */
+  --brutal-radius: 0;
+
+  /* Transitions */
+  --brutal-transition: all 0.2s ease-in-out;
+  --brutal-transition-slow: all 0.4s ease-in-out;
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* CSS Custom Properties for Components */
+.theme-brutal {
+  --background: var(--cyber-black);
+  --foreground: var(--cyber-white);
+  --primary: var(--cyber-green);
+  --primary-foreground: var(--cyber-black);
+  --secondary: var(--cyber-magenta);
+  --secondary-foreground: var(--cyber-white);
+  --accent: var(--cyber-green-bright);
+  --accent-foreground: var(--cyber-black);
+  --destructive: var(--brutal-red);
+  --destructive-foreground: var(--cyber-white);
+  --border: var(--cyber-green);
+  --input: var(--cyber-black);
+  --ring: var(--cyber-green);
+  --muted: var(--cyber-gray-dark);
+  --muted-foreground: var(--cyber-gray);
+  --popover: var(--cyber-dark);
+  --popover-foreground: var(--cyber-white);
+  --card: var(--cyber-dark);
+  --card-foreground: var(--cyber-white);
+}
+
+/* Light Theme Override */
+.theme-light {
+  --background: var(--cyber-white);
+  --foreground: var(--cyber-black);
+  --primary: var(--cyber-green);
+  --primary-foreground: var(--cyber-black);
+  --secondary: var(--cyber-magenta);
+  --secondary-foreground: var(--cyber-white);
+  --accent: var(--cyber-green);
+  --accent-foreground: var(--cyber-black);
+  --destructive: var(--brutal-red);
+  --destructive-foreground: var(--cyber-white);
+  --border: var(--cyber-green);
+  --input: var(--cyber-white);
+  --ring: var(--cyber-green);
+  --muted: var(--cyber-gray);
+  --muted-foreground: var(--cyber-black);
+  --popover: var(--cyber-white);
+  --popover-foreground: var(--cyber-black);
+  --card: var(--cyber-white);
+  --card-foreground: var(--cyber-black);
+}
+
+/* Component Base Styles */
+.brutal-component {
+  border-radius: var(--brutal-radius);
+  border-width: var(--brutal-border);
+  border-style: solid;
+  border-color: var(--border);
+  transition: var(--brutal-transition);
+}
+
+.brutal-button {
+  @apply brutal-component;
+  padding: var(--brutal-md) var(--brutal-xl);
+  font-family: var(--font-brutalist);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.brutal-input {
+  @apply brutal-component;
+  padding: var(--brutal-md) var(--brutal-lg);
+  font-family: var(--font-mono);
+  background-color: var(--input);
+  color: var(--foreground);
+}
+
+.brutal-card {
+  @apply brutal-component;
+  padding: var(--brutal-xl);
+  background-color: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--brutal-shadow);
+}

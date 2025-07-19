@@ -1,0 +1,3 @@
+/* Import core Tailwind directives */
+@import "../styles/globals.css";
+@import "../styles/brutalist-tokens.css";
