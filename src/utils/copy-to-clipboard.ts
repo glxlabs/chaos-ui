@@ -59,7 +59,7 @@ export const formatFullComponentCode = (
 ): string => {
   const importStatements =
     imports.length > 0
-      ? imports.map(imp => `import ${imp} from "@chaos/ui";`).join("\n") + "\n\n"
+      ? imports.map(imp => `import ${imp} from "@glitchlabs/chaosui";`).join("\n") + "\n\n"
       : "";
 
   const componentCode = formatComponentCode(componentName, props, children);
@@ -72,7 +72,7 @@ export const formatFullComponentCode = (
 };
 
 export const getComponentImportPath = (componentName: string): string => {
-  return `import { ${componentName} } from "@chaos/ui";`;
+  return `import { ${componentName} } from "@glitchlabs/chaosui";`;
 };
 
 export const generateComponentSnippet = (

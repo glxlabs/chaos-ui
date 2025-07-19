@@ -187,7 +187,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen = true, onClose }) => {
             <h3 className="text-sm font-brutalist font-bold uppercase text-cyber-green mb-2">
               Quick Start
             </h3>
-            <code className="text-xs text-cyber-gray font-mono">npm install @chaos/ui</code>
+            <code className="text-xs text-cyber-gray font-mono">
+              npm install @glitchlabs/chaosui
+            </code>
           </div>
         </div>
       </aside>

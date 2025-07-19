@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      include: ["src/components/**/*", "src/utils/**/*", "src/hooks/**/*"],
+      include: ["src/components/**/*", "src/utils/**/*", "src/hooks/**/*", "src/lib/**/*"],
       exclude: [
         "src/components/sections/**/*",
         "src/components/showcase/**/*",
