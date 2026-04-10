@@ -18,3 +18,5 @@ jobs:
         run: nixpacks build . --name ${{ secrets.DOCKERHUB_USERNAME }}/chaos-ui:latest
       - name: Push to Docker Hub
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/chaos-ui:latest
+      - name: Trigger Dokploy deploy
+        run: curl -s -X POST "${{ secrets.DOKPLOY_WEBHOOK_URL }}"
